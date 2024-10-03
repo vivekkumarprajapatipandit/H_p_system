@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Sign Up</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-image: url("{% static 'images/img2.jpeg' %}");
+            background-size: cover;
+            background-color: #f0f0f0;
+            background-repeat: no-repeat;
+
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        hr {
+            border-top: 1px solid #dee2e6;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+        .text-center a {
+            color: #007bff;
+        }
+        .text-center a:hover {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="{% url 'login' %}" class="btn btn-warning" title="Go to login page">
+                <i class="fa fa-arrow-left"></i>
+            </a>
+            <a href="{% url 'home' %}" class="btn btn-warning" title="Go to Home">
+                <i class="fa fa-home"></i>
+            </a>
+        </div>
+        <form name="form2" method="POST" action="{% url 'register' %}"> 
+            {% csrf_token %}
+            <h2 class="text-center m-2">User Sign Up</h2>
+            <hr>
+            <div class="form-group">
+                <label for="Fullname">Full Name</label>
+                <input type="text" id="Fullname" name="Fullname" placeholder="Enter your Full Name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="Username">Username</label>
+                <input type="text" id="Username" name="Username" placeholder="Enter Username" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="email" id="Email" name="Email" placeholder="Enter your Email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <input type="password" id="Password" name="Password" placeholder="Enter Password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                title="Password must be at least 8 characters long and include at least one digit, one lowercase and one uppercase letter." required>
+            </div>
+            <div class="form-group">
+                <label for="ConfirmPassword">Confirm Password</label>
+                <input type="password" id="ConfirmPassword" name="ConfirmPassword" placeholder="Confirm Password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                title="Password must be at least 8 characters long and include at least one digit, one lowercase and one uppercase letter." required>
+            </div>
+            <div class="form-group">
+                <label for="Aadhar">Contact Number</label>
+                <input type="text" id="Aadhar" name="Aadhar" placeholder="Enter Contact Number" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="Gender">Gender</label>
+                <select id="Gender" name="Gender" class="form-control" required>
+                    <option></option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="DOB">Date of Birth</label>
+                <input type="date" id="DOB" name="DOB" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="Language">Language</label>
+                <select class="form-control" id="Language" name="Language" required>
+                    <option></option>
+                    <option>English</option>
+                    <option>Hindi</option>
+                    <option>Sanskrit</option>
+                    <option>Mandarin</option>
+                    <option>Spanish</option>
+                    <option>French</option>
+                    <option>Arabic</option>
+                    <option>Russian</option>
+                    <option>Portuguese</option>
+                    <option>German</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+            <button type="submit" value="Register" class="btn btn-primary">Register</button>
+            <p class="text-center mb-5 text-success" style="border-top: 2px solid black;">
+                Already have an account? <a class="text-danger" href="{% url 'login' %}">Login</a>.
+            </p>
+        </form>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

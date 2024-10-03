@@ -1,0 +1,304 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - House Price Prediction System</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .about-section {
+            padding: 60px 0;
+        }
+        .about-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .about-section p {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+        .team-member {
+            margin-bottom: 30px;
+        }
+        .team-member img {
+            width: 150px;
+            border-radius:30%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .team-member h5 {
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+        .content {
+            margin-top: 150px;
+        }
+        .btn-custom {
+            background-color: #000000;
+            color: white;
+            padding: 16px 32px;
+        }
+    .corne{
+        background-color:#0c5460;
+        color:white;
+        border-radius:5px;
+        
+    }
+    .corner{
+        background-color:#0c5460;
+        color:white;
+        border-radius:5px;
+        width:371px;
+    }
+    .lime{
+        background-color:#0c5460;
+        
+        
+    }
+    .corn{
+        color:white;
+        font-size:20px;
+        font-family:arial;
+    }
+    .cornet{
+        color:white;
+        font-size:20px;
+        font-family:arial;
+        padding:20px;
+        background-color:#0c5460;
+    }
+    .logo_con{
+        color:white;
+    
+    
+        
+
+    }
+    .logo_con:hover{
+        color:red;
+        background-color:white;
+        border-radius:5px;
+    }
+    .promo{
+        color:white;
+        background-color:#db4e12;
+        font-size:20px;
+        padding:5px;
+    }
+    .promo:hover{
+        color:white;
+        background-color:orange;
+        font-size:20px;
+        padding:5px;
+    }
+    .least:hover{
+        background-color:white;
+        padding:5px;
+    }
+    .criteria{
+        border:1px solid black;
+
+    }
+    .rang{
+        border-radius:5px;
+    }
+    .team-memberen{
+  border-left: 2px solid black;   /* Left border */
+  border-top: 2px solid black;    /* Top border */
+  border-bottom: 2px solid black; /* Bottom border */
+  border-right: none; 
+    }
+    .texter{
+        font-size:20px;
+        color:orange;
+    }
+
+    </style>
+</head>
+<body>
+   
+    
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg lime">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'images/icons8-log-cabin-94.png' %}" width="30" height="30" alt="Logo">
+            </a>
+            <h4  class="logo_con"><strong class="text-bold text-info">House</strong>PricePrediction System</h4>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active least">
+                        <a class="nav-link corn" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item least">
+                        <a class="nav-link corn" href="{% url 'register' %}">Register</a>
+                    </li>
+                    <li class="nav-item least">
+                        <a class="nav-link corn" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item least">
+                        <a class="nav-link corn" href="{% url 'about' %}">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+<p class="promo"><marquee>This is house price prediction system you can check the your house price for leaving and enjoy yourself </marquee></p>
+
+
+
+
+<div class="container criteria">
+<div class="container about-section">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>About Us</h1>
+            <p class="text-info">Welcome to the House Price Prediction System, your trusted source for accurate and reliable house price predictions. Our system uses advanced machine learning algorithms to analyze various factors and provide you with the most precise estimates of house prices in your area.</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center team-member">
+            <img src="{% static 'images/vvvvvv.jpg' %}" alt="Team Member 1">
+            <h5 class="bg-dark text-white rang p-3">My name is vivek kumar prajapati </h5>
+            <p class="card-text text-justify">Hello! My name is <strong class="text-warning text-bold">[Vivek kumar prajapati(Intern at Techonet smriti nagar bhilai)], </strong>and I am a
+                passionate and experienced Full Stack Developer with a strong 
+                background in both front-end and back-end development. With [6] 
+                months of professional experience in the tech industry, I have honed my skills in creating robust, 
+               scalable, and user-friendly websites.</p>
+            </div>
+        <div class="col-md-6 text-center team-memberen">
+            <h5>Some important point to for notice:-</h5>
+            <p class="text-warning text-justify">House price prediction involves using statistical models and machine learning algorithms to estimate the future prices of residential properties. Key factors influencing house prices include location, size, number of bedrooms and bathrooms, age of the property, and local market trends. Economic indicators such as interest rates, employment rates, and income levels also play a significant role.
+
+                Traditional methods like hedonic pricing models analyze the impact of various attributes on house prices. More recently, machine learning techniques such as linear regression, decision trees, random forests, and neural networks have become popular due to their ability to handle large datasets and uncover complex patterns.
+                
+                Data for house price prediction is gathered from real estate listings, government records, and economic reports. This data is then cleaned, normalized, and divided into training and test sets. Models are trained using the training set and evaluated on the test set to assess their accuracy.
+                
+                Accurate house price predictions benefit buyers, sellers, real estate agents, and investors by providing insights into market trends and helping to make informed decisions. Advanced models incorporating real-time data and geographic information systems (GIS) further enhance the precision of these predictions, making them invaluable tools in the real estate industry.
+                
+                
+                
+                
+                
+                
+                </p>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container">
+    <h4 class="text-warning text-center text-bold mt-3">Why Choose us</h4>
+    <div class="container mt-5">
+        
+        
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link texter" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is the House Price Prediction System?
+                        </button>
+                    </h2>
+                </div>
+    
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h2>About House Price Prediction System</h2>
+        <p class="text-dark">key Feature</p>
+        <p class="text-dark">Machine Learning Algorithms</p>
+        <p class="text-dark">User-Friendly Interface</p>
+        <p class="text-dark">Data-Driven Insights</p>
+        <p class="text-dark">Scalability</p>
+                        <p>The House Price Prediction System is a tool that uses advanced machine learning algorithms to estimate the value of residential properties based on various factors.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed texter" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How does the system work?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        The system collects data on various property features, processes it, and uses machine learning models trained on historical data to predict property values.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed texter" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Who can benefit from using this system?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Home buyers, sellers, real estate agents, and investors can all benefit from the accurate and reliable property value predictions provided by the system.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid mt-3 p-3">
+
+    <footer class="footer bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5> About us<h5>
+                    <p>
+                        Bhilai kohka khurud <br>
+                        Email: vk6255863@gmail.com<br>
+                        Phone: (+91) 6370192107
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{% url 'home' %}" class="text-light">Home</a></li>
+                        <li><a href="{% url 'register' %}" class="text-light">Register</a></li>
+                        <li><a href="{% url 'login' %}" class="text-light">login</a></li>
+                        <li><a href="{% url 'about' %}" class="text-light">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h5 class="text-center inner"><a href="#">☎️Contact Us</a>
+                        <p class="text-center"><i class="fa fa-map-marker  "></i>🏚️ Bhilai kohka khurud chhattisgarh 490023(India)</p>
+                        <p class="text-center"><i class="fa fa-phone  "></i>📞 (+91) 6370192107</p>
+                        <p class="text-center"><i class="fa fa-envelope  "></i>HousepricePrediction@gmail.com</p>
+                        <h5 class="text-center text-warning inner">Follow Us</h5>
+                        <a href="https://www.instagram.com/prajapativivek9931515" class="text-white mr-2  text-center"><i class="fa fa-facebook">ⓕ facebook</i></a>
+                        <a href="https://www.twitter.com/yourusername" class="text-white mr-2  text-center"><i class="fa fa-twitter">🕊️ Twitter</i></a>
+                        <a href="https://www.facebook.com/yourusername" class="text-white mr-2  text-center"><i class="fa fa-instagram">𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦</i></a>
+
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="text-center">&copy; 2024 House Price Prediction System. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("{% static 'images/img2.jpeg' %}");
+            background-size: cover;
+            background-color: #f0f0f0;
+            background-repeat: no-repeat;
+            color: white;
+        }
+        .form-container {
+            background-color:#17a2b8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        .form-group p {
+            margin-bottom: 5px;
+        }
+        .tent{
+            background-color:black;
+            color:white;
+            border-radius:5px;
+            padding:10px;
+        }
+        
+        .content {
+            margin-top: 150px;
+        }
+        .btn-custom {
+            background-color: #000000;
+            color: white;
+            padding: 16px 32px;
+        }
+    .corne{
+        background-color:#0c5460;
+        color:white;
+        border-radius:5px;
+        
+    }
+    .corner{
+        background-color:#0c5460;
+        color:white;
+        border-radius:5px;
+        width:371px;
+    }
+    .lime{
+        background-color:#0c5460;
+        
+        
+    }
+    .corn{
+        color:white;
+        font-size:20px;
+        font-family:arial;
+    }
+    .cornet{
+        color:white;
+        font-size:20px;
+        font-family:arial;
+        padding:20px;
+        background-color:#0c5460;
+    }
+    .logo_con{
+        color:white;
+    
+    }
+    .logo_con:hover{
+        color:red;
+        background-color:white;
+        border-radius:5px;
+    }
+    .promo{
+        color:white;
+        background-color:#db4e12;
+        font-size:20px;
+        padding:5px;
+    }
+    .promo:hover{
+        color:white;
+        background-color:orange;
+        font-size:20px;
+        padding:5px;
+    }
+    .least:hover{
+        background-color:white;
+        padding:5px;
+    }
+        
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg lime">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'images/icons8-log-cabin-94.png' %}" width="30" height="30" alt="Logo">
+            </a>
+            <h4  class="logo_con"><strong class="text-bold text-info">House</strong>PricePrediction System</h4>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active least">
+                        <a class="nav-link corn" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item least">
+                        <a class="nav-link corn" href="{% url 'register' %}">Register</a>
+                    </li>
+                    <li class="nav-item least">
+                        <a class="nav-link corn" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item least">
+                        <a class="nav-link corn" href="{% url 'about' %}">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+<p class="promo"><marquee>This is house price prediction system you can check the your house price for leaving and enjoy yourself </marquee></p>
+
+
+
+
+
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="form-container">
+                    <h5 class="text-center tent" >🖊️Please Enter the Following Values</h5>
+                    <form action="result">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <p>Avg. Area Income</p>
+                                <input type="text" name="n1" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <p>Avg. House Age</p>
+                                <input type="text" name="n2" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <p>Avg. Area Number of Rooms</p>
+                                <input type="text" name="n3" class="form-control" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <p>Avg. Number of Bedrooms</p>
+                                <input type="text" name="n4" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p>Avg. Area of Population</p>
+                            <input type="text" name="n5" class="form-control" required>
+                        </div>
+                        <div class="form-group text-center">
+                            <input type="submit" value="PREDICT" class="btn btn-primary">
+                        </div>
+                    </form>
+                    <h2 class="text-center">{{ result2 }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

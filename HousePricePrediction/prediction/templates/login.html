@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .btn-warning {
+            display: block;
+            width: fit-content;
+            margin: auto;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        hr {
+            border-top: 1px solid #dee2e6;
+        }
+        .text-center a {
+            color: #007bff;
+        }
+        .text-center a:hover {
+            text-decoration: none;
+        }
+        .text-danger {
+            color: #dc3545;
+        }
+        .text-primary {
+            color: #007bff;
+        }
+        .card.shadow-lg {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+        .card .text-center {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .card .text-center hr {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .btn-block {
+            margin-top: 20px;
+        }
+        .mt-3 {
+            margin-top: 1rem !important;
+        }
+        .mb-5 {
+            margin-bottom: 3rem !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="{% url 'home' %}" class="btn btn-warning m-5" title="Go to Home"><i class="fa fa-home"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <form name="form1" method="POST" action="{% url 'login' %}"> 
+            {% csrf_token %}
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-6 col-lg-4 bg-light card shadow-lg">
+                    <h2 class="text-center m-2">Login</h2>
+                    <hr>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="T1" placeholder="Enter Username" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="T2" placeholder="Enter Password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                        title="Password must be at least 8 characters long and include at least one digit, one lowercase and one uppercase letter." required>
+                    </div>
+                    <button type="submit" value="Login" class="btn btn-primary btn-block">Login</button>
+                    <p class="text-center mt-3 mb-5 text-danger" style="border-top: 2px solid black;">
+                        Don't have an account? <a class="text-primary" href="{% url 'register' %}">Register</a>.
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
